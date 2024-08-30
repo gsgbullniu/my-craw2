@@ -15,12 +15,13 @@ const c = new Crawler({
       //a lean implementation of core jQuery designed specifically for the server
       // fs.writeFileSync('test.html', $.html());
       const $content = $('.show_content pre');
-      $content.find('font[color=#E6E6DD]').remove();
+      const $hide = $content.find('font[color=#E6E6DD]');
+      $hide.next('p:empty').replaceWith('\n\n').end().remove();
       // $content.find('p').replaceWith('\n\n');
-      $content.find('p').each((i, el) => {
+      /*       $content.find('p').each((i, el) => {
         const pText = $(el).text();
         $(el).replaceWith(`\n${pText}\n`);
-      });
+      }); */
 
       $content.find('br').replaceWith('\n');
       fs.writeFileSync('test.txt', $content.text());
