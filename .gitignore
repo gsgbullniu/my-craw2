@@ -21,3 +21,4 @@ out-tsc/
 .env
 **/storageState.json
 proxy.conf.mjs
+/data
