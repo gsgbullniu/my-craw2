@@ -14,6 +14,12 @@ const c = new Crawler({
       // $ is Cheerio by default
       //a lean implementation of core jQuery designed specifically for the server
       // fs.writeFileSync('test.html', $.html());
+      const title = $('title')
+        .text()
+        .replace(/ - cool18.com$/g, '')
+        // remove invalid characters in file name
+        .replace(/[\\/:*?"<>|]/g, '_');
+
       const $content = $('.show_content pre');
       const $hide = $content.find('font[color=#E6E6DD]');
       $hide.next('p:empty').replaceWith('\n\n').end().remove();
@@ -24,10 +30,10 @@ const c = new Crawler({
       }); */
 
       $content.find('br').replaceWith('\n');
-      fs.writeFileSync('test.txt', $content.text());
+      fs.writeFileSync(`${title}.txt`, $content.text());
+      console.log('Crawled done for ', title);
     }
 
-    console.log('Crawled done');
     (done as any)();
   },
 });
