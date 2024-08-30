@@ -33,6 +33,7 @@ const c = new Crawler({
 
 // Add just one URL to queue, with default callback
 c.add('https://www.cool18.com/bbs4/index.php?app=forum&act=threadview&tid=14280908');
+
 /*
 // Add a list of URLs
 c.add(['http://www.google.com/', 'http://www.yahoo.com']);
