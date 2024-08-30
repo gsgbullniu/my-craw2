@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    // "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "nodenext",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "nodenext",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+  /*   ,
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] */
+}

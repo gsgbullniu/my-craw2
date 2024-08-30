@@ -1,0 +1,142 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "prefer-arrow"
+      ],
+      "rules": {
+        // "no-console": "warn",
+        "@typescript-eslint/strict-boolean-expressions": [
+          "error",
+          {
+            "allowNullableBoolean": true
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/member-delimiter-style": [
+          "off",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": false
+            }
+          }
+        ],
+        "@typescript-eslint/no-non-null-assertion": [
+          "warn"
+        ],
+        "@typescript-eslint/semi": [
+          "off"
+        ],
+        "prefer-arrow/prefer-arrow-functions": [
+          "error",
+          {
+            "allowStandaloneDeclarations": true
+          }
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": [
+              "signature",
+              "static-field",
+              "decorated-field",
+              "abstract-field",
+              "field",
+              "constructor",
+              "static-method",
+              "decorated-method",
+              "abstract-method",
+              "method"
+            ]
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "default",
+            "format": [
+              "camelCase"
+            ],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": [
+              "variable",
+              "objectLiteralProperty"
+            ],
+            "format": [
+              "camelCase",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "typeLike",
+            "format": [
+              "PascalCase"
+            ]
+          },
+          {
+            "selector": "objectLiteralProperty",
+            "format": null,
+            "modifiers": [
+              "requiresQuotes"
+            ]
+          },
+          {
+            "selector": "classProperty",
+            "format": [
+              "UPPER_CASE"
+            ],
+            "modifiers": [
+              "static"
+            ]
+          },
+          {
+            "selector": "enumMember",
+            "format": [
+              "UPPER_CASE"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.spec.ts"
+      ],
+      "rules": {
+        "prefer-arrow/prefer-arrow-functions": [
+          0
+        ]
+      }
+    }
+  ]
+}
