@@ -4,7 +4,7 @@
   "main": "dist/main.js",
   "private": true,
   "scripts": {
-    "start": "tsx src/main.mts",
+    "start": "tsx src/search.mts",
     "tsc": "tsc --incremental",
     "go": "node dist/main.js",
     "lint": "eslint . --ext .ts",
