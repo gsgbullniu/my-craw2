@@ -4,7 +4,10 @@
   "main": "dist/main.js",
   "private": true,
   "scripts": {
-    "start": "tsx src/main.mts",
+    "dw": "tsx src/dw.mts",
+    "tt": "tsx src/task.mts",
+    "sr": "tsx src/search.mts",
+    "li": "tsx src/links.mts",
     "tsc": "tsc --incremental",
     "go": "node dist/main.js",
     "lint": "eslint . --ext .ts",
@@ -12,7 +15,8 @@
   },
   "dependencies": {
     "@types/node": "^20.16.0",
-    "crawler": "^2.0.2"
+    "crawler": "^2.0.2",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.9.0",

@@ -13,18 +13,14 @@
     "target": "ES2022",
     "module": "nodenext",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022"
-    ],
+    "lib": ["ES2022"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
     // "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src/**/*.mts"
-  ]
+  "include": ["src/**/*.mts"]
   /*   ,
   "exclude": [
     "node_modules",
