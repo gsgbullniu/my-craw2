@@ -5,7 +5,7 @@ import fs from 'fs';
 export const conn = new Crawler({
   maxConnections: 10,
   proxy: 'http://127.0.0.1:10090',
-  rateLimit:200,
+  rateLimit: 200,
 
   // This will be called for each crawled page
   callback: (error, res, done) => {
@@ -35,7 +35,7 @@ export const conn = new Crawler({
       }); */
 
       $content.find('br').replaceWith('\n');
-      fs.writeFileSync(`data/${title}.txt`, $content.text()+'\n\n\n');
+      fs.writeFileSync(`data/${title}.txt`, $content.text() + '\n\n\n');
       console.log('Crawled done for ', title);
     }
 

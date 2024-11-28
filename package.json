@@ -8,7 +8,6 @@
     "tt": "tsx src/task.mts",
     "sr": "tsx src/search.mts",
     "li": "tsx src/links.mts",
-
     "tsc": "tsc --incremental",
     "go": "node dist/main.js",
     "lint": "eslint . --ext .ts",

@@ -1,11 +1,11 @@
 import { CheerioAPI } from 'cheerio';
 import Crawler from 'crawler';
 import fs from 'fs';
-import { conn } from "./item.mjs";
+import { conn } from './item.mjs';
 
-const args = process.argv.slice(2)
+const args = process.argv.slice(2);
 console.log('args: ' + args);
-const id = args[0]
+const id = args[0];
 
 // Add just one URL to queue, with default callback
 conn.add(`https://www.cool18.com/bbs4/index.php?app=forum&act=threadview&tid=${id}`);

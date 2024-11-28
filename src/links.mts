@@ -35,17 +35,13 @@ const conn = new Crawler({
         // console.log(` ===== `, link);
       });
 
-      console.log('============',
-      $('p:contains("所有跟帖:")')
-      .next()
-      .find('li').length
-      );
+      console.log('============', $('p:contains("所有跟帖:")').next().find('li').length);
 
       $('p:contains("所有跟帖:")')
         .next()
         .find('li')
         .each((i, el) => {
-          const $a = $(el).children('a')
+          const $a = $(el).children('a');
           const pText = $a.text();
           const link = $a.attr('href');
 
